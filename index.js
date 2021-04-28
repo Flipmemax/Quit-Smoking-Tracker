@@ -1,6 +1,9 @@
-// This Quit Smoking Tracker runs in the Terminal. It needs 4 arguments to run.
+// This Quit Smoking Tracker runs in the Terminal. 
 // It keeps track of how many days it has been since your quitdate, how much money this saved you and how many cigarettes you have NOT smoked!
+
+// this program needs 4 arguments to run:
 //<date> <priceperpack> <cigarettesperpack> <cigarettessmokedperday>
+
 // Date format: month-day-year - examples: april -27-2021 / 04-27-2021 / 4-27-21
 // Example:
 // $ node index.js 04-27-2021 7.50 19 15
