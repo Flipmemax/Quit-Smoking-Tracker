@@ -112,6 +112,8 @@ function formatOutPut(userObject) {
     That's a great achievement! Keep up the good work!
 
     Not smoking has saved you €${userObject.moneySaved}!
+
+    Your wallet and lungs thank you!
     
 `;
 }
