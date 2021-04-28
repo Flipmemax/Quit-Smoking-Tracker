@@ -1,4 +1,4 @@
-// This Quit Smoking Tracker runs in the Terminal. 
+// This Quit Smoking Tracker runs in the Terminal.
 // It keeps track of how many days it has been since your quitdate, how much money this saved you and how many cigarettes you have NOT smoked!
 
 // this program needs 4 arguments to run:
