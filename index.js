@@ -104,6 +104,11 @@ function cigarettesNotSmokedCalculator(day, cigarettesperday) {
   return cigarettesNotSmoked;
 }
 
+function quoteGenerator(aquote) {
+  const thisQuote = aquote[Math.floor(Math.random() * aquote.length)];
+  return thisQuote;
+}
+
 function formatOutPut(userObject) {
   return `
     Congrats! You haven't smoked for ${userObject.quitDay} days
@@ -113,13 +118,15 @@ function formatOutPut(userObject) {
 
     Not smoking has saved you €${userObject.moneySaved}!
 
-    Your wallet and lungs thank you!
+    ${userObject.randomQuote}
     
 `;
 }
 
 function quitSmokingTracker() {
   validateNumberOfInputs(process.argv);
+
+  const quotes = require("./quotes.json");
 
   const quitDay = daysSinceQuitDay(process.argv[2]);
   const costPerPack = parseFloat(process.argv[3]);
@@ -145,12 +152,15 @@ function quitSmokingTracker() {
     cigarettesInAPack
   );
 
+  const randomQuote = quoteGenerator(quotes);
+
   const user = {
     quitDay: quitDay,
     costPerPack: costPerPack,
     cigarettesInAPack: cigarettesInAPack,
     cigarettesNotSmoked: cigarettesNotSmoked,
     moneySaved: moneySaved,
+    randomQuote: randomQuote,
   };
 
   const outPut = formatOutPut(user);
